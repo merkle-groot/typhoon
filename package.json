@@ -1,0 +1,17 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "circomlib": "^2.0.5",
+    "hardhat": "^2.22.16"
+  },
+  "dependencies": {
+    "chai": "^4.5.0",
+    "circom_tester": "^0.0.20",
+    "circomlibjs": "^0.1.7",
+    "mocha": "^10.8.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
