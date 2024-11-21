@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import './Deposit.sol';
 import './Withdraw.sol';
 
-contract Miksi {
+contract Typhoon {
     Deposit dVerifier;
     Withdraw wVerifier;
 
