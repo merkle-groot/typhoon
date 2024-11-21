@@ -4,12 +4,12 @@ pragma solidity ^0.8.20;
 import './Deposit.sol';
 import './Withdraw.sol';
 
-contract Typhoon {
+contract Miksi {
     Deposit dVerifier;
     Withdraw wVerifier;
 
     uint256 public key = 0;
-    uint256 public amount = 0.1 ether; // Fixed amount in wei (0.1 ETH)
+    uint256 public amount = 0.11 ether; // Fixed amount in wei (1 ETH)
     uint256 public root;
     uint256[] public commitments;
     mapping(uint256 => bool) public nullifiers;
@@ -63,7 +63,7 @@ contract Typhoon {
         uint256[3] memory input = [
             nullifier,
             root,
-            uint256(_address) // Cast address to uint256
+            uint256(uint160(address(_address))) // Cast address to uint256
         ];
         require(wVerifier.verifyProof(a, b, c, input), "zkProof withdraw could not be verified");
 

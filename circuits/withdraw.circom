@@ -48,4 +48,4 @@ template Withdraw(nLevels) {
 }
 
 // Instantiate the main component
-component main = Withdraw(8);
+component main{public [nullifier, root, address]} = Withdraw(8);

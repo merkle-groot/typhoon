@@ -11,16 +11,14 @@ template Deposit(nLevels) {
     signal input rootNew;
     signal input commitment;
     signal input key;
-    signal input nullifier;
 
     // Private Inputs
+    signal input nullifier;
     signal input secret;
     signal input oldKey;
     signal input oldValue;
     signal input isOld0; // 1 if old value is 0 (non-existent)
     signal input siblings[nLevels];
-
-    signal output result;
 
     // Poseidon Hash for Nullifier
     component nullifierCmp = Poseidon(2);
@@ -67,4 +65,4 @@ template Deposit(nLevels) {
 }
 
 // Instantiate the main component
-component main = Deposit(8);
+component main{public [oldRoot, rootNew, commitment, key]} = Deposit(8);
